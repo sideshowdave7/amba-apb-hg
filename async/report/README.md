@@ -48,7 +48,12 @@ Net Interconnect area:      undefined  (Wire load has zero net area)
   
 Total cell area:           105.369600  
 Total area:                 undefined  
-  
+ 
+
+
+
+Power
+ 
 Global Operating Voltage = 1.8    
 Power-specific unit information :  
     Voltage Units = 1V  
@@ -80,7 +85,4 @@ combinational  7.9208e-03        8.3040e-03            1.1327        1.6226e-02 
 --------------------------------------------------------------------------------------------------  
 Total          7.9208e-03 mW     8.3040e-03 mW         1.1327 nW     1.6226e-02 mW  
   
-  
-  
-Power  
   
