@@ -118,7 +118,7 @@ if [info exists dc_shell_mode] {
 checkpoint setup
 CPU-setup: 1
 MEM-setup: 178912
-CLK-setup: 1399679837
+CLK-setup: 1399697667
 #----------------------------------------------------------------------#
 #                        READ VERILOG NETLIST                          #
 #----------------------------------------------------------------------#
@@ -159,7 +159,7 @@ Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 checkpoint read
 CPU-read: 2
 MEM-read: 178912
-CLK-read: 1399679837
+CLK-read: 1399697667
 # current_design $design_name
 # set_attribute event_delay_buf size_only true
 report_attribute -design
@@ -168,7 +168,7 @@ report_attribute -design
 Report : Attribute
 Design : testbench
 Version: G-2012.06-SP3
-Date   : Fri May  9 17:57:17 2014
+Date   : Fri May  9 22:54:27 2014
 ****************************************
 
 Design          Object             Type      Attribute Name            Value
@@ -228,7 +228,7 @@ Writing verilog file '/home/davidh/apb_async/async/synth/testbench.rtlopt.v'.
 checkpoint write
 CPU-write: 2
 MEM-write: 178912
-CLK-write: 1399679837
+CLK-write: 1399697667
 exit
 
 Thank you...

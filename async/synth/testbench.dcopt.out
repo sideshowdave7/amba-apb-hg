@@ -122,7 +122,7 @@ if [info exists dc_shell_mode] {
 checkpoint setup
 CPU-setup: 1
 MEM-setup: 178916
-CLK-setup: 1399679840
+CLK-setup: 1399697670
 #----------------------------------------------------------------------#
 #                        READ DB FROM RTLOPT                           #
 #----------------------------------------------------------------------#
@@ -140,7 +140,7 @@ testbench
 checkpoint read
 CPU-read: 2
 MEM-read: 178916
-CLK-read: 1399679840
+CLK-read: 1399697670
 current_design $design_name
 Current design is 'testbench'.
 {testbench}
@@ -157,7 +157,7 @@ link
 checkpoint link
 CPU-link: 2
 MEM-link: 178916
-CLK-link: 1399679840
+CLK-link: 1399697670
 #----------------------------------------------------------------------#
 #                           READ CONSTRAINTS                           #
 #----------------------------------------------------------------------#
@@ -192,7 +192,7 @@ Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 checkpoint cstr
 CPU-cstr: 2
 MEM-cstr: 178916
-CLK-cstr: 1399679840
+CLK-cstr: 1399697670
 #----------------------------------------------------------------------#
 #                                COMPILE                               #
 #----------------------------------------------------------------------#
@@ -216,25 +216,15 @@ check_design
 ****************************************
 check_design summary:
 Version:     G-2012.06-SP3
-Date:        Fri May  9 17:57:20 2014
+Date:        Fri May  9 22:54:30 2014
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
 Inputs/Outputs                                                     33
     Unconnected ports (LINT-28)                                    33
-
-Cells                                                               4
-    Leaf pins connected to undriven nets (LINT-58)                  4
-
-Nets                                                                3
-    Unloaded nets (LINT-2)                                          1
-    Undriven nets (LINT-3)                                          2
 --------------------------------------------------------------------------------
 
-Warning: In design 'testbench', net 'zz000' driven by pin 'AO_i2/Z' has no loads. (LINT-2)
-Warning: In design 'testbench', net 'TRANFERn' has no drivers.  Logic 0 assumed. (LINT-3)
-Warning: In design 'testbench', net 'zzz00' has no drivers.  Logic 0 assumed. (LINT-3)
 Warning: In design 'testbench', port 'PRESETn' is not connected to any nets. (LINT-28)
 Warning: In design 'testbench', port 'PRDATA[31]' is not connected to any nets. (LINT-28)
 Warning: In design 'testbench', port 'PRDATA[30]' is not connected to any nets. (LINT-28)
@@ -268,10 +258,6 @@ Warning: In design 'testbench', port 'PRDATA[3]' is not connected to any nets. (
 Warning: In design 'testbench', port 'PRDATA[2]' is not connected to any nets. (LINT-28)
 Warning: In design 'testbench', port 'PRDATA[1]' is not connected to any nets. (LINT-28)
 Warning: In design 'testbench', port 'PRDATA[0]' is not connected to any nets. (LINT-28)
-Warning: In design 'testbench', input pin 'B1' of leaf cell 'AO_i0' is connected to undriven net 'zzz00'.  (LINT-58)
-Warning: In design 'testbench', input pin 'A' of leaf cell 'AND_i0' is connected to undriven net 'TRANFERn'.  (LINT-58)
-Warning: In design 'testbench', input pin 'A2' of leaf cell 'AO_i1' is connected to undriven net 'zzz00'.  (LINT-58)
-Warning: In design 'testbench', input pin 'B2' of leaf cell 'AO_i2' is connected to undriven net 'zzz00'.  (LINT-58)
 1
 ## clock gate design
 #insert_clock_gating
@@ -290,7 +276,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 40 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 33 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -301,8 +287,12 @@ Information: There are 40 potential problems in your design. Please run 'check_d
   Updating timing information
 Information: Updating design information... (UID-85)
 Information: Timing loop detected. (OPT-150)
-	U2/A2 U2/Z 
-Warning: Disabling timing arc between pins 'A2' and 'Z' on cell 'U2'
+	U5/A2 U5/Z U2/A U2/Z 
+Information: Timing loop detected. (OPT-150)
+	U3/A1 U3/Z 
+Warning: Disabling timing arc between pins 'A2' and 'Z' on cell 'U5'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A1' and 'Z' on cell 'U3'
          to break a timing loop. (OPT-314)
 Information: Design 'testbench' has no optimization constraints set. (OPT-108)
 
@@ -314,20 +304,20 @@ Information: Design 'testbench' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
 
 
 
@@ -337,9 +327,9 @@ Information: Design 'testbench' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -348,21 +338,21 @@ Information: Design 'testbench' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
-    0:00:01      37.6      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
+    0:00:01     105.4      0.00       0.0       0.0                          
 Loading db file '/uusoc/facility/cad_tools/Async/lib/IBM/7RF/synopsys/PnomV180T025_STD_CELL_7RF.db'
 
   Optimization Complete
@@ -380,14 +370,13 @@ check_design
 ****************************************
 check_design summary:
 Version:     G-2012.06-SP3
-Date:        Fri May  9 17:57:21 2014
+Date:        Fri May  9 22:54:32 2014
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
 Inputs/Outputs                                                     33
     Unconnected ports (LINT-28)                                    33
-    Constant outputs (LINT-52)                                      1
 --------------------------------------------------------------------------------
 
 Warning: In design 'testbench', port 'PRESETn' is not connected to any nets. (LINT-28)
@@ -431,7 +420,7 @@ End: 3
 checkpoint compile
 CPU-compile: 3
 MEM-compile: 178916
-CLK-compile: 1399679841
+CLK-compile: 1399697672
 #----------------------------------------------------------------------#
 #                           FINAL QOR REPORT                           #
 #----------------------------------------------------------------------#
@@ -442,22 +431,26 @@ file delete $design_name.profile_post.out
 report_qor
 Information: Updating design information... (UID-85)
 Information: Timing loop detected. (OPT-150)
-	U2/A2 U2/Z 
-Warning: Disabling timing arc between pins 'A2' and 'Z' on cell 'U2'
+	U5/A2 U5/Z U9/A U9/Z 
+Information: Timing loop detected. (OPT-150)
+	U3/A1 U3/Z 
+Warning: Disabling timing arc between pins 'A2' and 'Z' on cell 'U5'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A1' and 'Z' on cell 'U3'
          to break a timing loop. (OPT-314)
  
 ****************************************
 Report : qor
 Design : testbench
 Version: G-2012.06-SP3
-Date   : Fri May  9 17:57:21 2014
+Date   : Fri May  9 22:54:32 2014
 ****************************************
 
 
   Timing Path Group (none)
   -----------------------------------
-  Levels of Logic:               2.00
-  Critical Path Length:          0.15
+  Levels of Logic:               3.00
+  Critical Path Length:          0.36
   Critical Path Slack:         uninit
   Critical Path Clk Period:       n/a
   Total Negative Slack:          0.00
@@ -472,10 +465,10 @@ Date   : Fri May  9 17:57:21 2014
   -----------------------------------
   Hierarchical Cell Count:          0
   Hierarchical Port Count:          0
-  Leaf Cell Count:                  2
-  Buf/Inv Cell Count:               1
+  Leaf Cell Count:                  6
+  Buf/Inv Cell Count:               2
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:         2
+  Combinational Cell Count:         6
   Sequential Cell Count:            0
   Macro Count:                      0
   -----------------------------------
@@ -483,18 +476,18 @@ Date   : Fri May  9 17:57:21 2014
 
   Area
   -----------------------------------
-  Combinational Area:       37.632000
+  Combinational Area:      105.369600
   Noncombinational Area:     0.000000
-  Buf/Inv Area:             11.289600
+  Buf/Inv Area:             22.579201
   Net Area:                  0.000000
   -----------------------------------
-  Cell Area:                37.632000
-  Design Area:              37.632000
+  Cell Area:               105.369600
+  Design Area:             105.369600
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:             5
+  Total Number of Nets:             8
   Nets With Violations:             0
   Max Trans Violations:             0
   Max Cap Violations:               0
@@ -506,11 +499,11 @@ Date   : Fri May  9 17:57:21 2014
   Compile CPU Statistics
   -----------------------------------------
   Resource Sharing:                    0.00
-  Logic Optimization:                  0.00
+  Logic Optimization:                  0.01
   Mapping Optimization:                0.29
   -----------------------------------------
-  Overall Compile Time:                0.85
-  Overall Compile Wall Clock Time:     1.35
+  Overall Compile Time:                0.84
+  Overall Compile Wall Clock Time:     1.21
 
 1
 report_area
@@ -519,7 +512,7 @@ report_area
 Report : area
 Design : testbench
 Version: G-2012.06-SP3
-Date   : Fri May  9 17:57:21 2014
+Date   : Fri May  9 22:54:32 2014
 ****************************************
 
 Library(s) Used:
@@ -527,20 +520,20 @@ Library(s) Used:
     PnomV180T025_STD_CELL_7RF (File: /uusoc/facility/cad_tools/Async/lib/IBM/7RF/synopsys/PnomV180T025_STD_CELL_7RF.db)
 
 Number of ports:                           37
-Number of nets:                             5
-Number of cells:                            2
-Number of combinational cells:              2
+Number of nets:                             8
+Number of cells:                            6
+Number of combinational cells:              6
 Number of sequential cells:                 0
 Number of macros:                           0
-Number of buf/inv:                          1
-Number of references:                       2
+Number of buf/inv:                          2
+Number of references:                       5
 
-Combinational area:         37.632000
-Buf/Inv area:               11.289600
+Combinational area:        105.369600
+Buf/Inv area:               22.579201
 Noncombinational area:       0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:            37.632000
+Total cell area:           105.369600
 Total area:                 undefined
 1
 report_timing -attributes
@@ -552,13 +545,13 @@ Report : timing
         -max_paths 1
 Design : testbench
 Version: G-2012.06-SP3
-Date   : Fri May  9 17:57:21 2014
+Date   : Fri May  9 22:54:32 2014
 ****************************************
 
 Operating Conditions: PnomV180T025_STD_CELL_7RF   Library: PnomV180T025_STD_CELL_7RF
 Wire Load Model Mode: enclosed
 
-  Startpoint: PREADY (input port)
+  Startpoint: TRANSFER (input port)
   Endpoint: PSEL (output port)
   Path Group: (none)
   Path Type: max
@@ -577,11 +570,12 @@ Attributes:
   Point                                    Incr       Path      Attributes
   -----------------------------------------------------------------------------
   input external delay                     0.00       0.00 r
-  PREADY (in)                              0.00       0.00 r
-  U5/Z (INVERTBAL_E)                       0.04       0.04 f
-  U2/Z (AO21_I)                            0.11       0.15 f    so 
-  PSEL (out)                               0.00       0.15 f
-  data arrival time                                   0.15
+  TRANSFER (in)                            0.00       0.00 r
+  U3/Z (OA21_I)                            0.12       0.12 r    so 
+  U5/Z (AOI21_E)                           0.06       0.18 f    so 
+  U9/Z (NAND2_A)                           0.17       0.36 r
+  PSEL (out)                               0.00       0.36 r
+  data arrival time                                   0.36
   -----------------------------------------------------------------------------
   (Path is unconstrained)
 
@@ -593,7 +587,7 @@ report_constraints
 Report : constraint
 Design : testbench
 Version: G-2012.06-SP3
-Date   : Fri May  9 17:57:21 2014
+Date   : Fri May  9 22:54:32 2014
 ****************************************
 
 
@@ -626,7 +620,7 @@ Date   : Fri May  9 17:57:21 2014
 checkpoint report
 CPU-report: 3
 MEM-report: 178916
-CLK-report: 1399679841
+CLK-report: 1399697672
 #----------------------------------------------------------------------#
 #                                 WRITE                                #
 #----------------------------------------------------------------------#
@@ -638,7 +632,6 @@ Writing ddc file 'testbench.dcopt.ddc'.
 1
 write -format verilog -hierarchy -output $design_name.dcopt.v
 Writing verilog file '/home/davidh/apb_async/async/synth/testbench.dcopt.v'.
-Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 #write -format verilog -output $design_name.dcopt.v
 write_sdc $design_name.dcopt.sdc
@@ -659,7 +652,7 @@ redirect $design_name.dcopt.power { report_power }
 checkpoint write
 CPU-write: 3
 MEM-write: 178916
-CLK-write: 1399679842
+CLK-write: 1399697672
 exit
 
 Thank you...
