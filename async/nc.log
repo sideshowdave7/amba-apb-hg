@@ -1,0 +1,166 @@
+ncverilog(64): 08.20-s025: (c) Copyright 1995-2010 Cadence Design Systems, Inc.
+TOOL:	ncverilog	08.20-s025: Started on May 09, 2014 at 21:39:54 MDT
+ncverilog
+	-l
+	nc.log
+	+access+r
+	-f APB_tb.v
+		`timescale
+		1ns
+		/
+		1ps
+		module
+		APB_tb;
+		reg
+		rst_n;
+		reg
+		TRANSFER;
+		reg
+		[31:0]
+		PADDR;
+		reg
+		[31:0]
+		PWDATA;
+		reg
+		PWRITE;
+		wire
+		[31:0]
+		PRDATA;
+		APB_TOP
+		uut
+		(
+		.rst_n(rst_n),
+		.TRANSFER(TRANSFER),
+		.PADDR(PADDR),
+		.PWDATA(PWDATA),
+		.PRDATA(PRDATA),
+		.PWRITE(PWRITE)
+		);
+		initial
+		begin
+		rst_n
+		=
+		0;
+		TRANSFER
+		=
+		0;
+		PADDR
+		=
+		0;
+		PWDATA
+		=
+		0;
+		PWRITE
+		=
+		0;
+		rst_n
+		=
+		0;
+		rst_n
+		=
+		1;
+		TRANSFER
+		=
+		1;
+		PWRITE
+		=
+		1;
+		PADDR
+		=
+		9'h100;
+		TRANSFER
+		=
+		0;
+		PWRITE
+		=
+		0;
+		end
+		endmodule
+	APB_TOP.v
+	APB_MASTER_ASYNC.v
+	APB_SLAVE_ASYNC.v
+ncverilog: *E,FILEMIS: Cannot find the provided file `timescale.
+ncverilog: *E,FILEMIS: Cannot find the provided file 1ns.
+ncverilog: *E,FMUK: The type of the file (/) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file 1ps.
+ncverilog: *E,FILEMIS: Cannot find the provided file module.
+ncverilog: *E,FILEMIS: Cannot find the provided file APB_tb;.
+ncverilog: *E,FILEMIS: Cannot find the provided file reg.
+ncverilog: *E,FILEMIS: Cannot find the provided file rst_n;.
+ncverilog: *E,FILEMIS: Cannot find the provided file reg.
+ncverilog: *E,FILEMIS: Cannot find the provided file TRANSFER;.
+ncverilog: *E,FILEMIS: Cannot find the provided file reg.
+ncverilog: *E,FILEMIS: Cannot find the provided file [31:0].
+ncverilog: *E,FILEMIS: Cannot find the provided file PADDR;.
+ncverilog: *E,FILEMIS: Cannot find the provided file reg.
+ncverilog: *E,FILEMIS: Cannot find the provided file [31:0].
+ncverilog: *E,FILEMIS: Cannot find the provided file PWDATA;.
+ncverilog: *E,FILEMIS: Cannot find the provided file reg.
+ncverilog: *E,FILEMIS: Cannot find the provided file PWRITE;.
+ncverilog: *E,FILEMIS: Cannot find the provided file wire.
+ncverilog: *E,FILEMIS: Cannot find the provided file [31:0].
+ncverilog: *E,FILEMIS: Cannot find the provided file PRDATA;.
+ncverilog: *E,FILEMIS: Cannot find the provided file APB_TOP.
+ncverilog: *E,FILEMIS: Cannot find the provided file uut.
+ncverilog: *E,FMUK: The type of the file (() could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file (.
+ncverilog: *E,FILEMIS: Cannot find the provided file .rst_n(rst_n),.
+ncverilog: *E,FILEMIS: Cannot find the provided file .TRANSFER(TRANSFER),.
+ncverilog: *E,FILEMIS: Cannot find the provided file .PADDR(PADDR),.
+ncverilog: *E,FILEMIS: Cannot find the provided file .PWDATA(PWDATA),.
+ncverilog: *E,FILEMIS: Cannot find the provided file .PRDATA(PRDATA),.
+ncverilog: *E,FILEMIS: Cannot find the provided file .PWRITE(PWRITE).
+ncverilog: *E,FILEMIS: Cannot find the provided file );.
+ncverilog: *E,FILEMIS: Cannot find the provided file initial.
+ncverilog: *E,FILEMIS: Cannot find the provided file begin.
+ncverilog: *E,FILEMIS: Cannot find the provided file rst_n.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file TRANSFER.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file PADDR.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file PWDATA.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file PWRITE.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file rst_n.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file rst_n.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 1;.
+ncverilog: *E,FILEMIS: Cannot find the provided file TRANSFER.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 1;.
+ncverilog: *E,FILEMIS: Cannot find the provided file PWRITE.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 1;.
+ncverilog: *E,FILEMIS: Cannot find the provided file PADDR.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 9'h100;.
+ncverilog: *E,FILEMIS: Cannot find the provided file TRANSFER.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file PWRITE.
+ncverilog: *E,FMUK: The type of the file (=) could not be determined.
+ncverilog: *E,FILEMIS: Cannot find the provided file =.
+ncverilog: *E,FILEMIS: Cannot find the provided file 0;.
+ncverilog: *E,FILEMIS: Cannot find the provided file end.
+ncverilog: *E,FILEMIS: Cannot find the provided file endmodule.
+TOOL:	ncverilog	08.20-s025: Exiting on May 09, 2014 at 21:39:54 MDT  (total: 00:00:00)

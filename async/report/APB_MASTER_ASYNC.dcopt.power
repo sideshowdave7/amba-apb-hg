@@ -1,0 +1,58 @@
+Loading db file '/uusoc/facility/cad_tools/Async/lib/IBM/7RF/synopsys/PnomV180T025_STD_CELL_7RF.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : testbench
+Version: G-2012.06-SP3
+Date   : Fri May  9 17:57:22 2014
+****************************************
+
+
+Library(s) Used:
+
+    PnomV180T025_STD_CELL_7RF (File: /uusoc/facility/cad_tools/Async/lib/IBM/7RF/synopsys/PnomV180T025_STD_CELL_7RF.db)
+
+
+Operating Conditions: PnomV180T025_STD_CELL_7RF   Library: PnomV180T025_STD_CELL_7RF
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+testbench              ZERO_WLM_4MZWB    PnomV180T025_STD_CELL_7RF
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   5.6013 uW   (65%)
+  Net Switching Power  =   2.9585 uW   (35%)
+                         ---------
+Total Dynamic Power    =   8.5598 uW  (100%)
+
+Cell Leakage Power     = 536.1440 pW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  5.6013e-03        2.9585e-03            0.5361        8.5604e-03  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total          5.6013e-03 mW     2.9585e-03 mW         0.5361 nW     8.5604e-03 mW
+1

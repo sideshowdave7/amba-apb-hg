@@ -1,0 +1,98 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 1500
+        -max_paths 1000
+Design : testbench
+Version: G-2012.06-SP3
+Date   : Fri May  9 17:57:22 2014
+****************************************
+
+Operating Conditions: PnomV180T025_STD_CELL_7RF   Library: PnomV180T025_STD_CELL_7RF
+Wire Load Model Mode: enclosed
+
+  Startpoint: TRANSFER (input port)
+  Endpoint: PSEL (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  testbench          ZERO_WLM_4MZWB        PnomV180T025_STD_CELL_7RF
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                    0.000      0.000 f
+  TRANSFER (in)                           0.000      0.000 f
+  U2/Z (AO21_I)                           0.080      0.080 f
+  PSEL (out)                              0.000      0.080 f
+  data arrival time                                  0.080
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: TRANSFER (input port)
+  Endpoint: PSEL (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  testbench          ZERO_WLM_4MZWB        PnomV180T025_STD_CELL_7RF
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                    0.000      0.000 r
+  TRANSFER (in)                           0.000      0.000 r
+  U2/Z (AO21_I)                           0.111      0.111 r
+  PSEL (out)                              0.000      0.111 r
+  data arrival time                                  0.111
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: PREADY (input port)
+  Endpoint: PSEL (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  testbench          ZERO_WLM_4MZWB        PnomV180T025_STD_CELL_7RF
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                    0.000      0.000 f
+  PREADY (in)                             0.000      0.000 f
+  U5/Z (INVERTBAL_E)                      0.035      0.035 r
+  U2/Z (AO21_I)                           0.094      0.130 r
+  PSEL (out)                              0.000      0.130 r
+  data arrival time                                  0.130
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: PREADY (input port)
+  Endpoint: PSEL (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  testbench          ZERO_WLM_4MZWB        PnomV180T025_STD_CELL_7RF
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                    0.000      0.000 r
+  PREADY (in)                             0.000      0.000 r
+  U5/Z (INVERTBAL_E)                      0.038      0.038 f
+  U2/Z (AO21_I)                           0.108      0.146 f
+  PSEL (out)                              0.000      0.146 f
+  data arrival time                                  0.146
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
