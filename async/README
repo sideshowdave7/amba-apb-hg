@@ -28,3 +28,15 @@ APB_tb.v : Simulation stimulus.
 
 
 apg-master-async.data: This is the specification used as input for the 3D burst-mode state machine tool.
+
+
+Overview of results:
+
+-Synthesized asynchronous AMBA APB bus master state machine onto 180nm Artisan VLSI cell library
+
+-Longest path is .356ns which allows about 2.8GHz operation
+-Total Dynamic Power = 16.2247 uW (100%)
+-Cell Leakage Power = 1.1327 nW
+-Area usage (w/out interconnection taken into consideration): 
+-Total cell area: 105.369600 (square microns)
+
